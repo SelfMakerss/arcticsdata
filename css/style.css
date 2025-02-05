@@ -395,14 +395,107 @@ body{
 }
 
 .service-box{
+	height: max-content;
 	margin-top: 1rem;
-	margin-bottom: 5rem;
+	margin-bottom: 1rem;
 }
 .service-box img{
 	display: block;
 	width: 80%;
 	height: auto;
 }
+
+.service-section {
+	padding: 60px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.service-container {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.service-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.text-content, .image-content {
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.text-content {
+	flex: 2;
+	min-width: 300px;
+}
+
+.text-content h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	color: #ff9900;
+}
+
+.text-content p {
+	margin-bottom: 15px;
+	line-height: 1.8;
+	color: #fff;
+}
+
+.styled-list {
+	list-style: none;
+	padding: 0;
+	color: #fff;
+}
+
+.styled-list li {
+	position: relative;
+	margin-bottom: 15px;
+	padding-left: 25px;
+}
+
+.styled-list li::before {
+	content: '\2022';
+	color: #ff9900;
+	font-size: 1.5rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.text-content h4 {
+	font-size: 1.8rem;
+	margin-top: 30px;
+	color: #ff9900;
+}
+
+.image-content {
+	flex: 1;
+	min-width: 280px;
+	text-align: center;
+}
+
+.image-content img {
+	max-width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+	.service-row {
+		flex-direction: column;
+	}
+
+	.text-content, .image-content {
+		flex: 1;
+		max-width: 100%;
+		text-align: center;
+	}
+}
+
 
 /*****************/
 /*     Plans     */
